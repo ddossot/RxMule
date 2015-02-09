@@ -10,15 +10,24 @@ The following demonstrates an asynchronous HTTP to Redis bridge, that only accep
         .observeEndpointAsync(new URI("http://localhost:8080/publish"))
         .distinct(
             muleEvent -> {
-                final String remoteAddressAndPort = muleEvent.getMessage().getInboundProperty(
-                    "MULE_REMOTE_CLIENT_ADDRESS");
+
+                final String remoteAddressAndPort =
+                    muleEvent
+                        .getMessage()
+                        .getInboundProperty(
+                            "MULE_REMOTE_CLIENT_ADDRESS");
 
                 return substringBefore(remoteAddressAndPort, ":");
             })
         .subscribe(
             asAction((MessageConsumer)
                 muleEvent -> {
-                    redisModule.publish("http-requests", false, muleEvent.getMessageAsString(), muleEvent);
+
+                    redisModule.publish(
+                        "http-requests",
+                        false,
+                        muleEvent.getMessageAsString(),
+                        muleEvent);
 
                     LOGGER.info("Published: {}", muleEvent);
         }));
@@ -42,7 +51,8 @@ data and meta-data that's being processed. Keep in mind that both objects are mu
 
 > You can read more about the structure of a `MuleMessage` [here](http://www.mulesoft.org/documentation/display/current/Mule+Message+Structure).
 
-> TODO link integration test class on GitHub
+Take a look at the [integration tests](https://github.com/ddossot/RxMule/blob/master/src/test/java/org/mule/rx/RxMuleITCase.java)
+to have a better idea of all you can do with RxMule.
 
 
 ## Usage
