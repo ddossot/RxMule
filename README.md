@@ -1,6 +1,6 @@
 # RxMule - Reactive Extensions for Mule ESB
 
-> TODO TravisCI build status
+[![Build Status](https://travis-ci.org/ddossot/RxMule.svg)](https://travis-ci.org/ddossot/RxMule)
 
 [Mule ESB](http://www.mulesoft.com/platform/soa/mule-esb-open-source-esb) specific bindings for [RxJava](http://github.com/ReactiveX/RxJava).
 
