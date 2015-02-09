@@ -6,31 +6,33 @@
 
 The following demonstrates an asynchronous HTTP to Redis bridge, that only accepts one request per remote IP:
 
-    rxMule
-        .observeEndpointAsync(new URI("http://localhost:8080/publish"))
-        .distinct(
+```java
+rxMule
+    .observeEndpointAsync(new URI("http://localhost:8080/publish"))
+    .distinct(
+        muleEvent -> {
+
+            final String remoteAddressAndPort =
+                muleEvent
+                    .getMessage()
+                    .getInboundProperty(
+                        "MULE_REMOTE_CLIENT_ADDRESS");
+
+            return substringBefore(remoteAddressAndPort, ":");
+        })
+    .subscribe(
+        asAction((MessageConsumer)
             muleEvent -> {
 
-                final String remoteAddressAndPort =
-                    muleEvent
-                        .getMessage()
-                        .getInboundProperty(
-                            "MULE_REMOTE_CLIENT_ADDRESS");
+                redisModule.publish(
+                    "http-requests",
+                    false,
+                    muleEvent.getMessageAsString(),
+                    muleEvent);
 
-                return substringBefore(remoteAddressAndPort, ":");
-            })
-        .subscribe(
-            asAction((MessageConsumer)
-                muleEvent -> {
-
-                    redisModule.publish(
-                        "http-requests",
-                        false,
-                        muleEvent.getMessageAsString(),
-                        muleEvent);
-
-                    LOGGER.info("Published: {}", muleEvent);
-        }));
+                LOGGER.info("Published: {}", muleEvent);
+    }));
+```
 
 ## Overview
 
