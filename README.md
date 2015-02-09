@@ -38,7 +38,7 @@ rxMule
 
 This module adds a number of classes to RxJava that make it possible to observe:
 
-- Mule inbound endpoints from traditional [transports]((http://www.mulesoft.org/documentation/display/current/Transports+Reference)),
+- Mule inbound endpoints from traditional [transports](http://www.mulesoft.org/documentation/display/current/Transports+Reference),
   including global endpoints and endpoints defined by URIs,
 - raw message sources, like the new [HTTP Listener Connector](http://www.mulesoft.org/documentation/display/current/HTTP+Listener+Connector),
 - [Anypoint Connectors](http://www.mulesoft.com/platform/cloud-connectors) message sources.
