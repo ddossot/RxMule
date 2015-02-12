@@ -59,8 +59,21 @@ to have a better idea of all you can do with RxMule.
 
 ## Usage
 
-Pre-built snapshots and releases will soon be available.
-In the meantime, you need to build the latest snapshot yourself with:
+Snapshot builds are available in the Sonatype OSS Snapshots repository:
+
+```xml
+<repository>
+    <id>ossrh</id>
+    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    <snapshots>
+        <enabled>true</enabled>
+    </snapshots>
+</repository>
+```
+
+Releases will soon be available on Central.
+
+If you need to build the latest snapshot yourself, run:
 
     mvn clean install
 
