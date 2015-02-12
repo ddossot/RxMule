@@ -416,6 +416,8 @@ public class RxMuleITCase
     @Test
     public void anypointMessageProcessor() throws Exception
     {
+        assumeThat("Assume Redis is accessible at localhost:6379", isPortFree(6379), is(false));
+
         final URI inboundHttpUri = new URI("http://localhost:" + freePort() + TEST_HTTP_PATH);
         final String incKey = "rx-mule.test." + randomAlphanumeric(100);
 
@@ -450,6 +452,8 @@ public class RxMuleITCase
     @Test
     public void distinct() throws Exception
     {
+        assumeThat("Assume Redis is accessible at localhost:6379", isPortFree(6379), is(false));
+
         final URI inboundHttpUri = new URI("http://localhost:" + freePort() + TEST_HTTP_PATH);
         final AtomicInteger counter = new AtomicInteger(0);
 
