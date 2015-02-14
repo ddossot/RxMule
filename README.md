@@ -1,6 +1,7 @@
 # RxMule - Reactive Extensions for Mule ESB
 
 [![Build Status](https://travis-ci.org/ddossot/RxMule.svg)](https://travis-ci.org/ddossot/RxMule)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.dossot/rx-mule/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.dossot/rx-mule)
 
 [Mule ESB](http://www.mulesoft.com/platform/soa/mule-esb-open-source-esb) specific bindings for [RxJava](http://github.com/ReactiveX/RxJava).
 
@@ -59,6 +60,7 @@ to have a better idea of all you can do with RxMule.
 
 ## Usage
 
+Releases are available on Central.
 Snapshot builds are available in the Sonatype OSS Snapshots repository:
 
 ```xml
@@ -70,8 +72,6 @@ Snapshot builds are available in the Sonatype OSS Snapshots repository:
     </snapshots>
 </repository>
 ```
-
-Releases will soon be available on Central.
 
 If you need to build the latest snapshot yourself, run:
 
