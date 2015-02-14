@@ -1,4 +1,4 @@
-# RxMule - Reactive Extensions for Mule ESB
+## RxMule - Reactive Extensions for Mule ESB
 
 [![Build Status](https://travis-ci.org/ddossot/RxMule.svg)](https://travis-ci.org/ddossot/RxMule)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.dossot/rx-mule/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.dossot/rx-mule)
