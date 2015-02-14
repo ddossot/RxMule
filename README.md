@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://raw.githubusercontent.com/ddossot/RxMule/master/rx-mule.png" alt="RxMule Logo" />
+</p>
+
 ## RxMule - Reactive Extensions for Mule ESB
 
 [![Build Status](https://travis-ci.org/ddossot/RxMule.svg)](https://travis-ci.org/ddossot/RxMule)
