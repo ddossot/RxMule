@@ -21,7 +21,7 @@
 
     <properties>
         <mule.version>3.6.0</mule.version>
-        <rxjava.version>1.0.4</rxjava.version>
+        <rxjava.version>1.0.8</rxjava.version>
 
         <java.version>1.7</java.version>
     </properties>
