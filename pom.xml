@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.dossot</groupId>
     <artifactId>rx-mule</artifactId>
-    <version>3.6.1-SNAPSHOT</version>
+    <version>3.7.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>RxMule</name>
@@ -20,7 +20,7 @@
     </ciManagement>
 
     <properties>
-        <mule.version>3.6.1</mule.version>
+        <mule.version>3.7.0-M1-SNAPSHOT</mule.version>
         <rxjava.version>1.0.8</rxjava.version>
 
         <java.version>1.7</java.version>
