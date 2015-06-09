@@ -21,7 +21,7 @@
 
     <properties>
         <mule.version>3.7.0-M1-SNAPSHOT</mule.version>
-        <rxjava.version>1.0.8</rxjava.version>
+        <rxjava.version>1.0.11</rxjava.version>
 
         <java.version>1.7</java.version>
     </properties>
